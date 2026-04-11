@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f1117;
+  --primary: #3b5bdb;
+  --primary-hover: #3451c7;
+  --dark-navy: #1c2146;
+  --section-green: #f0faf6;
+  --section-yellow: #fefbf0;
+  --text-muted: #5a6278;
+  --border: #e8eaf0;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100vw;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fade-in animation for scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Button base styles */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(59, 91, 219, 0.35);
+}
+
+/* Mockup container */
+.mockup-container {
+  background: #f0f4ff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* Feature badge */
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eef1ff;
+  color: var(--primary);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Check list item */
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+/* Container de borda do botão Hero (altura 80px totalizando) */
+.btn-hero-container {
+  display: inline-flex;
+  padding: 8px;
+  border-radius: 9999px;
+  background: #D5DEF9; /* Escurecido para aparecer como anel no fundo branco/cinza */
+  box-shadow: 0 4px 15px rgba(59, 91, 219, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hero-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 91, 219, 0.25);
+}
+
+/* Botão principal Hero (altura 64px) */
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* Gradiente mais claro/nítido como solicitado */
+  background: linear-gradient(135deg, #60A5FA 0%, #1D4ED8 100%);
+  color: #fff;
+  border-radius: 9999px;
+  height: 64px;
+  padding: 0 2.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn-hero:hover {
+  opacity: 0.95;
+}
+
+.btn-hero .sparkle-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOME PAGE — RESPONSIVE CLASSES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── HERO ── */
+.home-hero-section {
+  background: linear-gradient(150deg, #f5f7ff 0%, #eef2ff 50%, #f0f9ff 100%);
+  padding: 96px 24px 80px;
+  text-align: center;
+}
+
+.home-hero-title {
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-weight: 700;
+  color: #0f1117;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+  margin-bottom: 18px;
+}
+
+/* ── PARA QUEM ── */
+.home-para-quem-section {
+  background: #ffffff;
+  padding: 100px 24px;
+}
+
+.home-para-quem-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.home-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.home-para-quem-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #0f1117;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+/* ── STATS ── */
+.home-stats-section {
+  background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 100%);
+  padding: 96px 24px;
+  text-align: center;
+}
+
+/* ── BENEFÍCIOS ── */
+.home-benefits-section {
+  background: #ffffff;
+  padding: 80px 24px;
+}
+
+.home-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (max-width: 1024px)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .home-para-quem-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .home-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .home-hero-section {
+    padding: 64px 24px 48px !important;
+  }
+  
+  header {
+    background: white;
+  }
+
+  header > div {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .home-hero-title {
+    letter-spacing: -0.8px;
+  }
+
+  .home-para-quem-section {
+    padding: 64px 0 !important;
+    overflow-x: hidden;
+  }
+  
+  .home-para-quem-section > div {
+     padding-left: 24px !important;
+     padding-right: 24px !important;
+  }
+
+  .home-category-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 !important;
+    padding: 0 24px !important;
+    width: 100vw;
+    margin-left: -24px !important;
+  }
+  
+  .home-category-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-category-grid > * {
+    flex: 0 0 42%;
+    scroll-snap-align: center;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    position: relative;
+    aspect-ratio: 3/4;
+  }
+
+  .home-category-grid::after {
+    content: '';
+    flex: 0 0 24px;
+  }
+
+  .home-stats-section,
+  .home-benefits-section,
+  section[style*="paddingTop"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .home-stats-section > div,
+  .home-benefits-section > div,
+  section .max-w-\[1100px\],
+  section .max-w-\[1000px\] {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .home-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .btn-hero {
+    height: 52px;
+    padding: 0 1.6rem;
+    font-size: 1rem;
+  }
+
+  .btn-hero-container {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-section {
+    padding: 48px 24px 36px !important;
+  }
+
+  .home-para-quem-section {
+    padding: 48px 0 !important;
+  }
+
+  .home-stats-section {
+    padding: 48px 24px !important;
+  }
+
+  .home-benefits-section {
+    padding: 40px 24px !important;
+  }
+}
