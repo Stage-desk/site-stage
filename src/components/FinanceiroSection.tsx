@@ -36,6 +36,8 @@ export function FinanceiroSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             src="/img-stage-sessao-financeiro-01.png" 
             alt="Usuário consultando financeiro" 
+            width={1096}
+            height={739}
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 
@@ -50,6 +52,8 @@ export function FinanceiroSection() {
             <motion.img 
               src="/img-stage-sessao-financeiro-02.png" 
               alt="Gráfico financeiro" 
+              width={514}
+              height={298}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -67,6 +71,8 @@ export function FinanceiroSection() {
             <motion.img 
               src="/img-stage-sessao-financeiro-03.png" 
               alt="Card de Receita" 
+              width={290}
+              height={134}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -84,6 +90,8 @@ export function FinanceiroSection() {
             <motion.img 
               src="/img-stage-sessao-financeiro-04.png" 
               alt="Card de Despesas" 
+              width={249}
+              height={115}
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -112,7 +120,7 @@ export function FinanceiroSection() {
           </h2>
           
           {/* DESCRIÇÃO */}
-          <p style={{ color: '#5a6278', marginBottom: '18px', lineHeight: 1.7, fontSize: '1rem' }}>
+          <p style={{ color: '#374151', marginBottom: '18px', lineHeight: 1.7, fontSize: '1rem' }}>
             Descubra o lucro real de cada evento. O Stage calcula automaticamente todos os custos envolvidos e mostra se você está no caminho certo.
           </p>
 

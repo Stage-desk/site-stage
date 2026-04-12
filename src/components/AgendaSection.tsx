@@ -46,7 +46,7 @@ export function AgendaSection() {
           </h2>
           
           {/* DESCRIÇÃO: Paridade com Financeiro (mb 28px, line-height 1.7) */}
-          <p style={{ color: '#5a6278', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
+          <p style={{ color: '#374151', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
             Pare de perder dinheiro e descobrir conflitos de última hora. Com o Stage você enxerga tudo de uma vez e o sistema te avisa antes de qualquer problema.
           </p>
           
@@ -82,6 +82,8 @@ export function AgendaSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             src="/img-stage-sessao-agenda-01.png" 
             alt="Usuária usando o Stage" 
+            width={699}
+            height={722}
             className="relative z-0 w-[80%] h-auto rounded-none shadow-none object-contain"
           />
 
@@ -96,6 +98,8 @@ export function AgendaSection() {
             <motion.img 
               src="/img-stage-sessao-agenda-02.png" 
               alt="Calendário Pop-up" 
+              width={589}
+              height={597}
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -113,6 +117,8 @@ export function AgendaSection() {
             <motion.img 
               src="/img-stage-sessao-agenda-04.png" 
               alt="Próximos eventos" 
+              width={347}
+              height={107}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -130,6 +136,8 @@ export function AgendaSection() {
             <motion.img 
               src="/img-stage-sessao-agenda-03.png" 
               alt="Eventos do dia" 
+              width={448}
+              height={463}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"

@@ -26,14 +26,14 @@ const StarIcon = () => (
 // ─── Dados ───────────────────────────────────────────────────────────────────
 
 const categories = [
-  { name: 'Assessoria Cerimonial', image: '/Assessoria Cerimonial.png', href: '/blog/assessoria-cerimonial' },
-  { name: 'Decoração', image: '/Decoração.png', href: '/blog/decoracao' },
-  { name: 'Coquetelarias', image: '/Coquetelaria.png', href: '/blog/coquetelaria' },
+  { name: 'Assessoria Cerimonial', image: '/assessoria-cerimonial.png', href: '/blog/assessoria-cerimonial' },
+  { name: 'Decoração', image: '/decoracao.png', href: '/blog/decoracao' },
+  { name: 'Coquetelarias', image: '/coquetelaria.png', href: '/blog/coquetelaria' },
   { name: 'Buffet', image: '/buffet.png', href: '/blog/buffet' },
-  { name: 'Fotografo Filmmaker', image: '/Filmmaker.png', href: '/blog/fotografo-filmmaker' },
-  { name: 'Bandas e Artistas', image: '/Bandas e Artistas.png', href: '/blog/bandas-e-artistas' },
-  { name: 'Photobooth', image: '/Photobooth.png', href: '/blog/photobooth' },
-  { name: 'Recreação', image: '/Recreação.png', href: '/blog/recreacao' },
+  { name: 'Fotografo Filmmaker', image: '/filmmaker.png', href: '/blog/fotografo-filmmaker' },
+  { name: 'Bandas e Artistas', image: '/bandas-artistas.png', href: '/blog/bandas-e-artistas' },
+  { name: 'Photobooth', image: '/photobooth.png', href: '/blog/photobooth' },
+  { name: 'Recreação', image: '/recreacao.png', href: '/blog/recreacao' },
 ];
 
 const agendaItems = [
@@ -151,7 +151,7 @@ function FeatureSection({
         <div style={{ direction: 'ltr' }}>
           <span className="feature-badge" style={{ marginBottom: '20px', display: 'inline-flex' }}>{badge}</span>
           <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#0f1117', lineHeight: 1.2, marginBottom: '14px', letterSpacing: '-0.02em' }}>{title}</h2>
-          <p style={{ color: '#5a6278', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>{description}</p>
+          <p style={{ color: '#374151', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>{description}</p>
           <CheckList items={items} />
         </div>
         <div style={{ direction: 'ltr' }}>
@@ -201,7 +201,7 @@ export default function Home() {
               e previsíveis
             </span>
           </h1>
-          <p style={{ fontSize: '18px', color: '#5a6278', marginBottom: '36px', lineHeight: 1.65 }}>
+          <p style={{ fontSize: '18px', color: '#374151', marginBottom: '36px', lineHeight: 1.65 }}>
             Gerencie agenda, contratos, financeiro e clientes em um só lugar
           </p>
           <div className="btn-hero-container">
@@ -241,7 +241,7 @@ export default function Home() {
             <h2 className="home-para-quem-title">
               O Stage é para quem vive de eventos
             </h2>
-            <p style={{ color: '#5a6278', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '36px' }}>
+            <p style={{ color: '#374151', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '36px' }}>
               Tudo o que você precisa para gerenciar o seu negócio simplificando a gestão da sua agenda de eventos e financeiro de forma simples e eficiente.
             </p>
             <a href="https://v1.stagesystem.com.br/criar-conta" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
@@ -269,7 +269,7 @@ export default function Home() {
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 900, color: '#0f1117', lineHeight: 1.1, letterSpacing: '-0.03em', marginBottom: '20px' }}>
             Mais clareza, menos esforço e mais faturamento
           </h2>
-          <p style={{ color: '#5a6278', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '40px' }}>
+          <p style={{ color: '#374151', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '40px' }}>
             Quem usa o Stage tem{' '}
             <strong style={{ color: '#3b5bdb', fontSize: '1.5rem', fontWeight: 900 }}>27% de aumento</strong>
             {' '}no faturamento no primeiro ano. Porque quando você enxerga seus números, você toma decisões melhores.
@@ -309,7 +309,7 @@ export default function Home() {
             <h2 style={{ fontSize: '2.4rem', fontWeight: 900, color: '#0f1117', letterSpacing: '-0.03em', marginBottom: '12px' }}>
               FAQ
             </h2>
-            <p style={{ color: '#5a6278', fontSize: '1.1rem', lineHeight: 1.7 }}>
+            <p style={{ color: '#374151', fontSize: '1.1rem', lineHeight: 1.7 }}>
               Algumas dúvidas comuns antes de começar.
             </p>
           </div>
@@ -346,7 +346,7 @@ export default function Home() {
                 <summary style={{ cursor: 'pointer', fontWeight: 800, color: '#0f1117' }}>
                   {item.q}
                 </summary>
-                <p style={{ marginTop: 10, color: '#5a6278', lineHeight: 1.7 }}>
+                <p style={{ marginTop: 10, color: '#374151', lineHeight: 1.7 }}>
                   {item.a}
                 </p>
               </details>

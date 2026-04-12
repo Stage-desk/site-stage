@@ -18,6 +18,8 @@ export function CategoryCard({
       <img
         src={image}
         alt={name}
+        width={188}
+        height={262}
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
       
@@ -70,7 +72,7 @@ export function BenefitCard({
     >
       <div style={{ fontSize: '2rem', marginBottom: '14px' }}>{icon}</div>
       <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#0f1117', marginBottom: '8px' }}>{title}</h3>
-      <p style={{ color: '#5a6278', fontSize: '0.9rem', lineHeight: 1.6 }}>{desc}</p>
+      <p style={{ color: '#374151', fontSize: '0.9rem', lineHeight: 1.6 }}>{desc}</p>
     </div>
   );
 }
@@ -80,7 +82,7 @@ export function HoverLink({
   children,
   style,
   hoverColor = '#0f1117',
-  baseColor = '#5a6278',
+  baseColor = '#374151',
 }: {
   href: string;
   children: React.ReactNode;

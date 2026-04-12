@@ -49,7 +49,7 @@ export function ContratoSection() {
           </p>
 
           {/* TEXTO SECUNDÁRIO */}
-          <p style={{ color: '#5a6278', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
+          <p style={{ color: '#374151', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
             Ao cadastrar um evento, o contrato é gerado automaticamente, pronto para revisão e assinatura digital — sem retrabalho.
           </p>
           
@@ -86,6 +86,8 @@ export function ContratoSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             src="/img-stage-sessao-contrato-01.png" 
             alt="Contrato no celular" 
+            width={752}
+            height={816}
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 
@@ -100,6 +102,8 @@ export function ContratoSection() {
             <motion.img 
               src="/img-stage-sessao-contrato-04.png" 
               alt="Status da Assinatura" 
+              width={320}
+              height={223}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -117,6 +121,8 @@ export function ContratoSection() {
             <motion.img 
               src="/img-stage-sessao-contrato-02.png" 
               alt="Contrato Visualizado" 
+              width={435}
+              height={129}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -134,6 +140,8 @@ export function ContratoSection() {
             <motion.img 
               src="/img-stage-sessao-contrato-03.png" 
               alt="Contrato Assinado" 
+              width={435}
+              height={129}
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"

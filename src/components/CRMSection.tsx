@@ -36,6 +36,8 @@ export function CRMSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             src="/img-stage-sessao-crm-01.png" 
             alt="Dashboard CRM no laptop" 
+            width={999}
+            height={799}
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 
@@ -50,6 +52,8 @@ export function CRMSection() {
             <motion.img 
               src="/img-stage-sessao-crm-02.png" 
               alt="Card de Lead" 
+              width={673}
+              height={423}
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -67,6 +71,8 @@ export function CRMSection() {
             <motion.img 
               src="/img-stage-sessao-crm-03.png" 
               alt="Programar Mensagem" 
+              width={391}
+              height={131}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -84,6 +90,8 @@ export function CRMSection() {
             <motion.img 
               src="/img-stage-sessao-crm-04.png" 
               alt="Detalhe CRM" 
+              width={448}
+              height={269}
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               className="w-full h-auto rounded-none shadow-none"
@@ -117,7 +125,7 @@ export function CRMSection() {
           </p>
 
           {/* TEXTO SECUNDÁRIO */}
-          <p style={{ color: '#5a6278', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
+          <p style={{ color: '#374151', marginBottom: '28px', lineHeight: 1.7, fontSize: '1rem' }}>
             Ao cadastrar um evento, o contrato é gerado automaticamente, pronto para revisão e assinatura digital — sem retrabalho.
           </p>
           
