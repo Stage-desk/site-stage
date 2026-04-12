@@ -100,11 +100,11 @@ const benefits = [
       </div>
     </section>
 
-    {/* SEÇÕES ESTÁTICAS (Renderizadas como HTML puro, sem JS) */}
-    <AgendaSection />
-    <FinanceiroSection />
-    <ContratoSection />
-    <CRMSection />
+    {/* SEÇÕES COM ANIMAÇÃO (Necessitam de hidratação para disparar o scroll-view) */}
+    <AgendaSection client:visible />
+    <FinanceiroSection client:visible />
+    <ContratoSection client:visible />
+    <CRMSection client:visible />
 
     {/* ── ESTATÍSTICA ── */}
     <section class="home-stats-section">
