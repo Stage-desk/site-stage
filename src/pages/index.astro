@@ -1,8 +1,192 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Home from '../components/Home';
+import { Header } from '../components/Header';
+import { HeroMockups } from '../components/HeroMockups';
+import { VideoBanner } from '../components/VideoBanner';
+import { AgendaSection } from '../components/AgendaSection';
+import { FinanceiroSection } from '../components/FinanceiroSection';
+import { ContratoSection } from '../components/ContratoSection';
+import { CRMSection } from '../components/CRMSection';
+import { PricingSection } from '../components/PricingSection';
+import { TestimonialsSection } from '../components/TestimonialsSection';
+import { CategoryCard, BenefitCard } from '../components/HomeInteractive';
+
+const categories = [
+  { name: 'Assessoria Cerimonial', image: '/assessoria-cerimonial.png', href: '/blog/assessoria-cerimonial' },
+  { name: 'Decoração', image: '/decoracao.png', href: '/blog/decoracao' },
+  { name: 'Coquetelarias', image: '/coquetelaria.png', href: '/blog/coquetelaria' },
+  { name: 'Buffet', image: '/buffet.png', href: '/blog/buffet' },
+  { name: 'Fotografo Filmmaker', image: '/filmmaker.png', href: '/blog/fotografo-filmmaker' },
+  { name: 'Bandas e Artistas', image: '/bandas-artistas.png', href: '/blog/bandas-e-artistas' },
+  { name: 'Photobooth', image: '/photobooth.png', href: '/blog/photobooth' },
+  { name: 'Recreação', image: '/recreacao.png', href: '/blog/recreacao' },
+];
+
+const benefits = [
+  { icon: '📋', title: 'Tudo centralizado', desc: 'Chega de planilhas e anotações espalhadas. Agenda, clientes, finanças e contratos em um só lugar.' },
+  { icon: '💰', title: 'Lucro real por evento', desc: 'Saiba exatamente quanto você lucra em cada evento, descontando todos os custos envolvidos.' },
+  { icon: '🎯', title: 'Precificação inteligente', desc: 'Pare de cheirar o preço. Precifique com base em dados reais do seu negócio.' },
+  { icon: '⚡', title: 'Orçamentos em minutos', desc: 'Monte e envie orçamentos profissionais para seus clientes em poucos minutos.' },
+  { icon: '🔄', title: 'Orçamento vira contrato', desc: 'Com um clique, transforme o orçamento aprovado em contrato pronto para assinar.' },
+  { icon: '📊', title: 'Visão estratégica', desc: 'Dashboards que mostram a saúde do seu negócio e onde você pode crescer mais.' },
+];
 ---
 
 <Layout title="Stage | Gestão profissional para eventos">
-  <Home client:load />
+  <Header client:load />
+  
+  <main class="pt-[80px]">
+    {/* ── HERO ── */}
+    <section class="home-hero-section">
+      <div style="max-width: 1000px; margin: 0 auto">
+        <div style="display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px; border-radius: 9999px; background: #EAEFFD; border: 1px solid #C1D0F9; color: #2463EB; font-family: var(--font-inter), sans-serif; font-weight: 400; font-size: 14px; margin-bottom: 24px;">
+          Gestão profissional para quem vive de eventos
+        </div>
+
+        <h1 class="home-hero-title">
+          <span class="hidden sm:block">
+            Eventos mais <span style="color: #3b5bdb">lucrativos</span>,<br />
+            organizados e previsíveis
+          </span>
+          <span class="block sm:hidden text-[2.2rem] leading-[1.1] tracking-[-1.2px] font-extrabold">
+            Eventos mais <br />
+            <span style="color: #3b5bdb">lucrativos, organizados</span> <br />
+            e previsíveis
+          </span>
+        </h1>
+        <p style="font-size: 18px; color: #374151; margin-bottom: 36px; line-height: 1.65">
+          Gerencie agenda, contratos, financeiro e clientes em um só lugar
+        </p>
+        <div class="btn-hero-container">
+          <a href="https://v1.stagesystem.com.br/criar-conta" target="_blank" rel="noopener noreferrer" class="btn-hero">
+            <svg class="sparkle-icon" width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2ZM6 4L6.8 6.2L9 7L6.8 7.8L6 10L5.2 7.8L3 7L5.2 6.2L6 4ZM18 16L18.8 18.2L21 19L18.8 19.8L18 22L17.2 19.8L15 19L17.2 18.2L18 16Z" fill="#fff"/>
+            </svg>
+            Comece Grátis
+          </a>
+        </div>
+      </div>
+
+      <HeroMockups client:load />
+
+      <div style="margin-top: 120px">
+        <VideoBanner client:visible />
+      </div>
+    </section>
+
+    {/* ── PARA QUEM ── */}
+    <section id="funcionalidades" class="home-para-quem-section">
+      <div class="home-para-quem-grid">
+        <div class="home-category-grid order-2 lg:order-1">
+          {categories.map((cat) => (
+            <CategoryCard {...cat} />
+          ))}
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <span style="color: #3b5bdb; font-weight: 600; font-size: 1.1rem; margin-bottom: 12px; display: block">
+            Tudo simples na palma da mão
+          </span>
+          <h2 class="home-para-quem-title">
+            O Stage é para quem vive de eventos
+          </h2>
+          <p style="color: #374151; font-size: 1.15rem; line-height: 1.6; margin-bottom: 36px">
+            Tudo o que você precisa para gerenciar o seu negócio simplificando a gestão da sua agenda de eventos e financeiro de forma simples e eficiente.
+          </p>
+          <a href="https://v1.stagesystem.com.br/criar-conta" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem">
+            Comece grátis
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SEÇÕES ESTÁTICAS (Renderizadas como HTML puro, sem JS) */}
+    <AgendaSection />
+    <FinanceiroSection />
+    <ContratoSection />
+    <CRMSection />
+
+    {/* ── ESTATÍSTICA ── */}
+    <section class="home-stats-section">
+      <div style="max-width: 700px; margin: 0 auto">
+        <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: #0f1117; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px;">
+          Mais clareza, menos esforço e mais faturamento
+        </h2>
+        <p style="color: #374151; font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px">
+          Quem usa o Stage tem{" "}
+          <strong style="color: #3b5bdb; font-size: 1.5rem; font-weight: 900">27% de aumento</strong>
+          {" "}no faturamento no primeiro ano. Porque quando você enxerga seus números, você toma decisões melhores.
+        </p>
+        <a href="https://v1.stagesystem.com.br/criar-conta" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.05rem; padding: 0.85rem 2.4rem">
+          Começar agora — é grátis
+        </a>
+      </div>
+    </section>
+
+    {/* ── BENEFÍCIOS ── */}
+    <section class="home-benefits-section">
+      <div style="max-width: 1100px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 56px">
+          <h2 style="font-size: 2rem; font-weight: 800; color: #0f1117; letter-spacing: -0.02em">
+            Principais benefícios de usar o Stage no seu negócio de eventos
+          </h2>
+        </div>
+        <div class="home-benefits-grid">
+          {benefits.map((b) => (
+            <BenefitCard {...b} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <TestimonialsSection client:visible />
+
+    <PricingSection client:visible />
+
+    {/* ── FAQ ── */}
+    <section id="faq" style="background: #ffffff; padding: 96px 24px">
+      <div style="max-width: 920px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 44px">
+          <h2 style="font-size: 2.4rem; font-weight: 900; color: #0f1117; letter-spacing: -0.03em; margin-bottom: 12px">
+            FAQ
+          </h2>
+          <p style="color: #374151; font-size: 1.1rem; line-height: 1.7">
+            Algumas dúvidas comuns antes de começar.
+          </p>
+        </div>
+
+        <div style="display: grid; gap: 14px">
+          {[
+            {
+              q: 'Preciso de cartão para testar?',
+              a: 'Não. Você pode testar por 7 dias grátis sem cartão.',
+            },
+            {
+              q: 'Posso cancelar quando quiser?',
+              a: 'Sim. Você tem flexibilidade para cancelar quando quiser.',
+            },
+            {
+              q: 'O Stage serve para qual tipo de profissional?',
+              a: 'Para quem vive de eventos: assessorias, buffets, fotógrafos, decoradores e outros fornecedores.',
+            },
+            {
+              q: 'O que está incluso nos planos?',
+              a: 'Agenda, CRM, orçamentos, contratos com assinatura e controle financeiro integrados.',
+            },
+          ].map((item) => (
+            <details
+              style="border: 1px solid #e8eaf0; border-radius: 16px; padding: 16px 18px; background: #ffffff; box-shadow: 0 10px 30px rgba(15,17,23,0.04);"
+            >
+              <summary style="cursor: pointer; font-weight: 800; color: #0f1117">
+                {item.q}
+              </summary>
+              <p style="margin-top: 10px; color: #374151; line-height: 1.7">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
