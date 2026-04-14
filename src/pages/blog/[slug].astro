@@ -19,7 +19,7 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('pt-BR', {
 });
 ---
 
-<Layout title={`${entry.data.title} | Stage Blog`} description={entry.data.description}>
+<Layout title={`${entry.data.title ?? entry.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')} | Stage Blog`} description={entry.data.description}>
 
   <!-- ══════════════════════════════════════════════════════
        ARTICLE HERO — split layout (text left, image right)
@@ -31,7 +31,7 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('pt-BR', {
           <a href="/blog" class="article-category-link">{entry.data.category}</a>
         )}
 
-        <h1 class="article-title">{entry.data.title}</h1>
+        <h1 class="article-title">{entry.data.title ?? entry.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')}</h1>
 
         <div class="article-author-row">
           <div class="article-author-avatar">
@@ -56,7 +56,7 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('pt-BR', {
         <div class="article-hero-image-wrapper">
           <img
             src={entry.data.image}
-            alt={entry.data.title}
+            alt={entry.data.title ?? entry.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')} 
             class="article-hero-image"
             loading="eager"
           />

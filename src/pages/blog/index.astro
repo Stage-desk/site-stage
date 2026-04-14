@@ -64,7 +64,7 @@ const remainingPosts = posts.slice(1);
               {featuredPost.data.image ? (
                 <img 
                   src={featuredPost.data.image} 
-                  alt={featuredPost.data.title} 
+                  alt={featuredPost.data.title ?? featuredPost.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')} 
                   class="blog-featured-image" 
                   loading="eager"
                 />
@@ -82,7 +82,7 @@ const remainingPosts = posts.slice(1);
               {featuredPost.data.category && (
                 <span class="blog-card-category">{featuredPost.data.category}</span>
               )}
-              <h2 class="blog-featured-title">{featuredPost.data.title}</h2>
+              <h2 class="blog-featured-title">{featuredPost.data.title ?? featuredPost.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')}</h2>
               <p class="blog-featured-description">{featuredPost.data.description}</p>
               <div class="blog-card-meta">
                 <div class="blog-card-author-info">
@@ -117,7 +117,7 @@ const remainingPosts = posts.slice(1);
                 {post.data.image ? (
                   <img 
                     src={post.data.image} 
-                    alt={post.data.title} 
+                    alt={post.data.title ?? post.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')} 
                     class="blog-card-image" 
                     loading="lazy"
                   />
@@ -135,7 +135,7 @@ const remainingPosts = posts.slice(1);
                 {post.data.category && (
                   <span class="blog-card-category">{post.data.category}</span>
                 )}
-                <h3 class="blog-card-title">{post.data.title}</h3>
+                <h3 class="blog-card-title">{post.data.title ?? post.id.split('/').pop().replace(/\.mdoc$|\.md$/, '')}</h3>
                 <p class="blog-card-description">{post.data.description}</p>
                 <div class="blog-card-meta">
                   <div class="blog-card-author-info">
