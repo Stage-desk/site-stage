@@ -44,7 +44,7 @@ export function Header({ logo }: { logo?: any }) {
           {/* Botões (Direita) */}
           <div className="flex items-center justify-end gap-3 lg:gap-5">
             <a
-              href="https://app.stagesystem.com.br/login"
+              href="https://v1.stagesystem.com.br/login"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden text-sm font-medium text-[#5a6278] transition-colors hover:text-[#0f1117] sm:block"
@@ -118,7 +118,7 @@ export function Header({ logo }: { logo?: any }) {
           
           <div className="flex flex-col gap-6">
             <a
-              href="https://app.stagesystem.com.br/login"
+              href="https://v1.stagesystem.com.br/login"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[16px] font-medium text-[#0f1117]"
