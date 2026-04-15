@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export function Header() {
+export function Header({ logo }: { logo?: any }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navLinks = [
@@ -22,8 +22,11 @@ export function Header() {
           <div className="flex justify-start">
             <a href="/" className="flex items-center outline-none" onClick={() => setIsSidebarOpen(false)}>
               <img
-                src="/logo.png"
+                src={logo?.src || "/logo.png"}
                 alt="Stage"
+                width={logo?.width || 140}
+                height={logo?.height || 50}
+                loading="eager"
                 className="w-[110px] sm:w-[140px] h-auto object-contain"
               />
             </a>
@@ -62,6 +65,7 @@ export function Header() {
             <button
               className="flex items-center justify-center p-2 text-[#5a6278] hover:text-[#0f1117] lg:hidden"
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              aria-label="Abrir menu"
             >
               {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,8 +84,11 @@ export function Header() {
           {/* Top Bar with Logo and Close Button - Ambos respeitando o padding de 36px */}
           <div className="flex items-center justify-between w-full">
              <img
-                src="/logo.png"
+                src={logo?.src || "/logo.png"}
                 alt="Stage"
+                width={110}
+                height={40}
+                loading="lazy"
                 className="w-[110px] h-auto object-contain"
               />
               

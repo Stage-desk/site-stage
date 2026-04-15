@@ -54,7 +54,7 @@ const columns = [
   },
 ];
 
-export function Footer() {
+export function Footer({ logo }: { logo?: any }) {
   return (
     <footer style={{ background: '#0F172A', fontFamily: 'var(--font-inter), sans-serif' }}>
       {/* Área Principal */}
@@ -71,7 +71,14 @@ export function Footer() {
         {/* Coluna 1 — Marca */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <a href="/" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src="/logo.png" alt="Stage" style={{ height: '28px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            <img 
+              src={logo?.src || "/logo.png"} 
+              alt="Stage" 
+              width={logo?.width || 100}
+              height={logo?.height || 28}
+              loading="lazy"
+              style={{ height: '28px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} 
+            />
           </a>
           <p style={{ color: '#94A3B8', fontSize: '14px', lineHeight: 1.65, maxWidth: '210px', margin: 0 }}>
             A plataforma definitiva de gestão para o mercado de eventos no Brasil.

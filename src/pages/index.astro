@@ -11,6 +11,16 @@ import { PricingSection } from '../components/PricingSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { CategoryCard, BenefitCard } from '../components/HomeInteractive';
 
+// Importando Assets para Otimização
+import mockup01 from '../assets/stage-mockup01.png';
+import mockup02 from '../assets/stage-mockup-02.png';
+import heroVideoThumb from '../assets/Hero video Copy.png';
+import imgAgenda01 from '../assets/img-stage-sessao-agenda-01.png';
+import imgFinanceiro01 from '../assets/img-stage-sessao-financeiro-01.png';
+import imgContrato01 from '../assets/img-stage-sessao-contrato-01.png';
+import imgCRM01 from '../assets/img-stage-sessao-crm-01.png';
+import logoImg from '../assets/logo.png';
+
 const categories = [
   { name: 'Assessoria Cerimonial', image: '/assessoria-cerimonial.png', href: '/blog/assessoria-cerimonial' },
   { name: 'Decoração', image: '/decoracao.png', href: '/blog/decoracao' },
@@ -65,10 +75,10 @@ const benefits = [
         </div>
       </div>
 
-      <HeroMockups client:load />
+      <HeroMockups client:load mockup01={mockup01} mockup02={mockup02} />
 
       <div style="margin-top: 120px">
-        <VideoBanner client:visible />
+        <VideoBanner client:visible thumbnail={heroVideoThumb} />
       </div>
     </section>
 
@@ -99,10 +109,10 @@ const benefits = [
     </section>
 
     {/* SEÇÕES COM ANIMAÇÃO (Necessitam de hidratação para disparar o scroll-view) */}
-    <AgendaSection client:visible />
-    <FinanceiroSection client:visible />
-    <ContratoSection client:visible />
-    <CRMSection client:visible />
+    <AgendaSection client:visible image={imgAgenda01} />
+    <FinanceiroSection client:visible image={imgFinanceiro01} />
+    <ContratoSection client:visible image={imgContrato01} />
+    <CRMSection client:visible image={imgCRM01} />
 
     {/* ── ESTATÍSTICA ── */}
     <section class="home-stats-section">

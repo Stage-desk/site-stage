@@ -10,7 +10,7 @@ const BlueCheckIcon = () => (
   </svg>
 );
 
-export function ContratoSection() {
+export function ContratoSection({ image }: { image?: any }) {
   return (
     // Fundo azul claro para alternar com o branco do Financeiro
     <section 
@@ -84,10 +84,11 @@ export function ContratoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            src="/img-stage-sessao-contrato-01.png" 
+            src={image?.src || "/img-stage-sessao-contrato-01.png"} 
             alt="Contrato no celular" 
-            width={752}
-            height={816}
+            width={image?.width || 752}
+            height={image?.height || 816}
+            loading="lazy"
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 

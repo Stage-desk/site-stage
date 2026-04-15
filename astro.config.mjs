@@ -10,12 +10,11 @@ import keystatic from '@keystatic/astro';
 export default defineConfig({
   site: 'https://www.stagesystem.com.br',
   output: 'static',
-  // Desativando o adaptador temporariamente para teste de diagnóstico
-  // adapter: cloudflare({
-  //   platformProxy: {
-  //     enabled: true,
-  //   },
-  // }),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
   vite: {
     plugins: [tailwindcss()],
     resolve: {

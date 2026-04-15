@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export function VideoBanner() {
+export function VideoBanner({ thumbnail }: { thumbnail?: any }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,8 +25,11 @@ export function VideoBanner() {
         {/* Lado Esquerdo: Imagem (Thumbnail) - Proporção ajustada */}
         <div className="relative w-[38%] shrink-0">
           <img 
-            src="/Hero video Copy.png" 
+            src={thumbnail?.src || "/Hero video Copy.png"} 
             alt="Thumbnail Vídeo" 
+            width={thumbnail?.width || 530}
+            height={thumbnail?.height || 300}
+            loading="lazy"
             className="w-full h-auto rounded-[16px] object-cover"
           />
           {/* Botão Play proporcional */}

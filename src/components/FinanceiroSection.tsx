@@ -10,7 +10,7 @@ const BlueCheckIcon = () => (
   </svg>
 );
 
-export function FinanceiroSection() {
+export function FinanceiroSection({ image }: { image?: any }) {
   return (
     // Fundo branco no Financeiro para alternar com o fundo azul claro da Agenda
     <section 
@@ -34,10 +34,11 @@ export function FinanceiroSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            src="/img-stage-sessao-financeiro-01.png" 
+            src={image?.src || "/img-stage-sessao-financeiro-01.png"} 
             alt="Usuário consultando financeiro" 
-            width={1096}
-            height={739}
+            width={image?.width || 1096}
+            height={image?.height || 739}
+            loading="lazy"
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 

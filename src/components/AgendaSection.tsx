@@ -10,7 +10,7 @@ const BlueCheckIcon = () => (
   </svg>
 );
 
-export function AgendaSection() {
+export function AgendaSection({ image }: { image?: any }) {
   return (
     // Fundo preenchendo toda a tela como no protótipo (azul super claro)
     <section 
@@ -80,10 +80,11 @@ export function AgendaSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            src="/img-stage-sessao-agenda-01.png" 
+            src={image?.src || "/img-stage-sessao-agenda-01.png"} 
             alt="Usuária usando o Stage" 
-            width={699}
-            height={722}
+            width={image?.width || 699}
+            height={image?.height || 722}
+            loading="lazy"
             className="relative z-0 w-[80%] h-auto rounded-none shadow-none object-contain"
           />
 

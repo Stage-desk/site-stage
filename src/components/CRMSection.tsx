@@ -10,7 +10,7 @@ const BlueCheckIcon = () => (
   </svg>
 );
 
-export function CRMSection() {
+export function CRMSection({ image }: { image?: any }) {
   return (
     // Fundo branco no CRM conforme solicitado
     <section 
@@ -34,10 +34,11 @@ export function CRMSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            src="/img-stage-sessao-crm-01.png" 
+            src={image?.src || "/img-stage-sessao-crm-01.png"} 
             alt="Dashboard CRM no laptop" 
-            width={999}
-            height={799}
+            width={image?.width || 999}
+            height={image?.height || 799}
+            loading="lazy"
             className="relative z-0 w-[85%] h-auto rounded-none shadow-none object-contain"
           />
 
